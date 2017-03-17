@@ -13,13 +13,16 @@
             <td></td>
             <td> <input type="submit" name="btnLogin" value="Login"> </td>
         </tr>
-    </table>     
+    </table>
 </form>
+
 <?php
-    $btn = $_POST['btnLogin'];
-    if(isset($btn))
-    {
-        echo 'Hello '.$_POST['user'];
-    }
+session_start();
+$btn = $_POST['btnLogin'];
+if(isset($btn))  // btn is pressed
+{
+    $_SESSION['username']= $_POST['user'];
+    echo 'Hello '.$_POST['user'];
+}
 ?>
 <?php include "footer.php"; ?>

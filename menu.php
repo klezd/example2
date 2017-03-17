@@ -11,6 +11,8 @@
                 <li> <a href="index.php">Main Page</a></li>
                 <li> <a href="login.php">Login</a></li>
                 <li> <a href="forms.php">Forms</a></li>
+                <li> <a href="user.php">User Page</a></li>
+                <li> <a href="logout.php">LogOut</a></li>
             </ul>
         </div>
         <div id="content">

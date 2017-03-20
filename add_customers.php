@@ -1,10 +1,10 @@
 <?php include "menu.php"; ?>
 <h2>Add Customer</h2>
 <form class="" action="customers.php" method="post">
-  <label for="fname">Firstname</label> <br/>
+  <label for="fn">Firstname</label> <br/>
   <input type="text" name="fn" id="fn" value="" required=""><br>
 
-  <label for="lname">Lastname</label> <br/>
+  <label for="ln">Lastname</label> <br/>
   <input type="text" name="ln" id="ln" value="" required=""><br>
 
   <label for="ad">Street address</label> <br/>

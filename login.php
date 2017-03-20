@@ -18,8 +18,7 @@
 
 <?php
 session_start();
-$btn = $_POST['btnLogin'];
-if(isset($btn))  // btn is pressed
+if(isset($_POST['btnLogin']))  // btn is pressed
 {
     $_SESSION['username']= $_POST['user'];
     echo 'Hello '.$_POST['user'];

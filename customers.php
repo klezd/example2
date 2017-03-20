@@ -1,7 +1,7 @@
 <?php
 include 'connection.php';
-$btn = $_POST['btnAdd'];
-if (isset($btn)) {
+
+if (isset($_POST['btnAdd'])) {
   $add=$db->prepare("INSERT INTO customers(firstname, lastname, streetaddress) VALUES(:fn,:ln,:ad)"); //name
   $add->bindParam(':fn', $fn);
   $add->bindParam(':ln', $ln);
@@ -19,15 +19,18 @@ if (isset($btn)) {
     <th>First name</th>
     <th>Last name</th>
     <th>Street Address</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
 
 <?php
-include "connection.php";
-$myquery="SELECT firstname, lastname, streetaddress FROM customers";
+
+$myquery="SELECT firstname, lastname, streetaddress, id_customers FROM customers";
 $customers_data = $db->query($myquery);
-print_r($customers_data);
+// print_r($customers_data);
 foreach ($customers_data as $row) {
-  echo '<tr><td>'.$row['firstname'].'</td><td>'.$row['lastname'].'</td><td>'.$row['streetaddress'].'</td></tr>';
+  echo '<tr><td>'.$row['firstname'].'</td><td>'.$row['lastname'].'</td><td>'.$row['streetaddress'].'</td>';
+  echo '<td><a href="update_customer.php?id='.$row['id_customers'].'"><button>Update </button></a></td></tr>';
 }
  ?>
  </table>

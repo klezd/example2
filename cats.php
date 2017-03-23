@@ -27,3 +27,5 @@ if(isset($_POST['btnShow'])){
     echo 'The owner '.$theOwner['name'].' is '.$theOwner['firstname'].' '.$theOwner['lastname'];
 }
 ?>
+
+<?php include "footer.php"; ?>

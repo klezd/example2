@@ -1,7 +1,6 @@
 <?php
 include 'connection.php';
 
-
 if (isset($_POST['btnEdit'])) {
   $add=$db->prepare("UPDATE customers SET firstname=:fn, lastname=:ln, streetaddress=:ad WHERE id_customers=:id"); //name
   $add->bindParam(':fn', $fn);
@@ -14,12 +13,11 @@ if (isset($_POST['btnEdit'])) {
   $id = $_POST['id'];
   $add->execute();
 }
+
 if (isset($_POST['btnDelete'])) {
   $deleteSQL = "DELETE FROM customers WHERE id_customers=".$_POST['id'];
   $db->query($deleteSQL);
 }
-
-
  ?>
 <?php include "menu.php"; ?>
 <h2>Customers</h2>

@@ -1,6 +1,6 @@
 <?php include "menu.php"; ?>
 <h2>Add Customer</h2>
-<form class="" action="customers.php" method="post">
+<form class="" action="insert_customers.php" method="post">
   <label for="fn">Firstname</label> <br/>
   <input type="text" name="fn" id="fn" value="" required=""><br>
 
